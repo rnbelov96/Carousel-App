@@ -1,0 +1,73 @@
+.carousel
+  list-style: none
+  padding: 0
+  display: flex
+  width: 100%
+  transform: translate3d(0%, 0px, 0px)
+  transition-duration: 350ms
+  &__title
+    background-color: black
+    position: absolute
+    bottom: 40px
+    text-align: center
+    color: white
+    width: 80%
+    transform: translateX(-50%)
+    left: 50%
+    padding: 8px
+    border-radius: 10px
+    opacity: 0.5
+    transition: opacity .25s ease-in
+    &:hover
+      opacity: 1
+  &__control-dots
+    display: flex
+    position: absolute
+    bottom: 15px
+    justify-content: center
+    width: 100%
+    &:hover + .carousel__title
+      opacity: 1
+    & div
+      margin-right: 10px
+      transition: opacity .25s ease-in
+      opacity: .5
+      cursor: pointer
+      width: 10px
+      height: 10px
+      border-radius: 100%
+      background-color: white
+      &:hover
+        opacity: 1
+      &:last-child
+        margin-right: 0
+  &__prev-btn, &__next-btn
+    height: 100%
+    width: 40px
+    position: absolute
+    top: 0
+    background-color: rgba(0,0,0,0)
+    transition: background-color 0.25s ease-in
+    border: none
+    font-size: 30px
+    &:focus
+      outline: none
+    &:hover
+      background-color: rgba(0,0,0,0.5)
+    &:hover div
+      opacity: 1
+    & div
+      transition: opacity 0.25s ease-in
+      border-top: 10px solid transparent
+      border-bottom: 10px solid transparent
+      opacity: 0.4
+      margin: 0 4px
+      content: ""
+  &__next-btn
+    right: 0
+    & div
+      border-left: 20px solid white
+  &__prev-btn
+    left: 0
+    & div
+      border-right: 20px solid white
