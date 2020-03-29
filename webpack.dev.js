@@ -52,7 +52,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       inject: false,
       template: require('html-webpack-template'),
-      title: 'Document',
+      title: 'Carousel',
       mobile: true,
       lang: 'en-US',
       appMountId: 'root',
